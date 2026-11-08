@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Mortgage repayment calculator</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <section>
+        <form novalidate>
+          <div class="form-header">
+            <h1>Mortgage Calculator</h1>
+
+            <p id="clear-all">Clear All</p>
+          </div>
+
+          <div class="mortgage-amount">
+            <label for="amount">Mortgage Amount</label>
+            <div class="input-wrapper">
+              <span class="currency">$</span>
+              <input type="number" id="amount" />
+            </div>
+            <p class="error-message"></p>
+          </div>
+
+          <!-- Mortgage & Interest -->
+          <div class="mortgage-interest">
+            <!-- Mortgage Term -->
+            <div>
+              <label for="years">Mortgage Term </label>
+              <div class="input-wrapper">
+                <input type="number" id="years" required />
+                <span class="currency">years</span>
+              </div>
+              <p class="error-message"></p>
+            </div>
+
+            <!-- Interest Rate -->
+
+            <div>
+              <label for="rate">Interest Rate</label>
+              <div class="input-wrapper">
+                <input type="number" id="rate" required />
+                <span class="currency">%</span>
+              </div>
+              <p class="error-message"></p>
+            </div>
+          </div>
+          <!-- Mortgage Type -->
+          <div class="mortgage-type">
+            <p>Mortgage Type</p>
+
+            <div class="radio-wrapper">
+              <input
+                type="radio"
+                class="radio-input"
+                name="mortgage-type"
+                value="repayment"
+                required
+              />
+              <label>Repayment</label>
+            </div>
+
+            <div class="radio-wrapper">
+              <input
+                type="radio"
+                class="radio-input"
+                name="mortgage-type"
+                value="interest-only"
+                required
+              />
+              <label>Interest Only</label>
+            </div>
+            <p class="error-message"></p>
+          </div>
+
+          <button type="submit" class="btn">
+            <img src="assets/images/icon-calculator.svg" alt="" />
+            <span> Calculate Repayments</span>
+          </button>
+        </form>
+        <!-- Empty results start -->
+        <div class="results-shown">
+          <img src="assets/images/illustration-empty.svg" alt="" />
+          <h1>Results shown here</h1>
+          <p>
+            Complete the form and click “calculate repayments” to see what your
+            monthly repayments would be.
+          </p>
+          <!-- Empty results end -->
+        </div>
+
+        <!-- Completed results start -->
+
+        <div class="your-results">
+          <h1>Your results</h1>
+
+          <p>
+            Your results are shown below based on the information you provided.
+            To adjust the results, edit the form and click “calculate
+            repayments” again.
+          </p>
+
+          <div class="repayment-card">
+            <div class="repayment-summary">
+              <p>Your monthly <span id="mortgage"></span></p>
+
+              <h1>$ <span id="monthly-payment">0.00</span></h1>
+
+              <div class="total-repayment">
+                <p>Total you'll repay over the term</p>
+                <h2>$ <span id="total-repayment"></span></h2>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Completed results end -->
+      </section>
+    </main>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/Donkadriel">Obumneme Offordile</a>.
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
