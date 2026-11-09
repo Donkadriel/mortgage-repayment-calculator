@@ -300,13 +300,27 @@ label {
 
 
   h1 {
-    font-size: 15px;
+    font-size: 25px;
     font-weight: 700;
   }
 
   label {
-    font-size: 11px;
+    font-size: 15px;
     font-weight: 700;
+    color: hsla(198, 27%, 42%, 0.842);
+  }
+  .radio-wrapper label{
+    color: rgba(54, 89, 117, 0.973);
+  }
+  .mortgage-type p{
+    font-size: 15px;
+    font-weight: 700;
+    color: hsla(198, 27%, 42%, 0.842);
+  }
+  input[type="number"] {
+    font-size: 15px;
+    font-weight: 700;
+    color: rgba(54, 89, 117, 0.973);
   }
 
   .results-shown,
@@ -341,7 +355,7 @@ label {
     border: none;
     color: white;
     padding: 8px 0 10px;
-    font-size: 11px;
+    font-size: 10px;
   }
 
   .repayment-card {
